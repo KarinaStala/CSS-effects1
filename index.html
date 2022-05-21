@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flying square</title>
+    <style>
+        * {
+            marin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+            background-color: skyblue;
+        }
+
+        button {
+            display: inline-block;
+            transition: 1s;
+            line-height: 30px;
+            padding: 10px 20px;
+            position: relative;
+            cursor: pointer;
+            background-color: chartreuse;
+            color: black;
+            font-weight: bold;
+            font-family: "Arial", sans serif;
+            border: 3px solid black;
+        }
+
+        button:hover {
+            position: absolute;
+            background-color: black;
+            color: chartreuse;
+            line-height: 60px;
+            padding: 30px 40px;
+            border: 3px solid chartreuse;
+        }
+
+
+        div.square {
+            width: 30px;
+            height: 30px;
+            top: 0;
+            left: 0;
+            background-color: black;
+            border: 2px solid chartreuse;
+            transition: 5s;
+            /* Jeśli kwadrat ma przelecieć naokoło ekranu to: 
+            transition: left .5s, top .5s .5s;*/
+            position: absolute;
+            color: chartreuse;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: "Arial", sans serif;
+            line-height: 20px;
+        }
+
+        button:hover+div.square {
+            top: 90%;
+            left: 90%;
+            width: 58px;
+            height: 58px;
+            font-size: 20px;
+            line-height: 50px;
+            letter-spacing: 2px;
+            border: 3px solid chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <button>I can fly</button>
+    <div class="square">fly</div>
+</body>
+
+</html>
